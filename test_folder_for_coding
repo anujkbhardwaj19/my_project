@@ -1,3 +1,13 @@
 x = {i: i**i for i in range(12)}
 
 print(x)
+
+def palindeome(s):
+    s = s.lower().replace(" ", "")
+    d = len(s)
+    for i in range(d//2):
+        if s[i] != s[d-i-1]:
+            return f'"{s}" is not a palindrome'
+    return f'"{s}" is a palindrome'
+
+print(palindeome(input()))
